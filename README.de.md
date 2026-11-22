@@ -14,11 +14,32 @@ Diese benutzerdefinierte Home-Assistant-Integration zeigt bestätigte Schulessen
 
 ## Installation
 
+### Marketplace (ab Home Assistant 2026.11)
+
+[![Luna Schulessen in Home Assistant öffnen](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=arndttigges&repository=home-assistant-luna-schulessen&category=integration)
+
+1. Nutze den Link oben oder öffne **Einstellungen → Marketplace → Über Link hinzufügen** und füge `https://github.com/arndttigges/home-assistant-luna-schulessen` ein.
+2. Verbinde GitHub, falls du dazu aufgefordert wirst, und bestätige das Hinzufügen. Wähle **Integration**, falls Home Assistant nach dem Typ fragt.
+3. Öffne **Luna Schulessen** und wähle **Installieren**. Starte Home Assistant neu, falls du dazu aufgefordert wirst.
+
+### Klassisches HACS (vor Home Assistant 2026.11)
+
+1. Öffne **HACS → ⋮ → Benutzerdefinierte Repositorys**.
+2. Füge `https://github.com/arndttigges/home-assistant-luna-schulessen` ein, wähle **Integration** und füge das Repository hinzu.
+3. Öffne **Luna Schulessen** in HACS, wähle **Herunterladen** und starte Home Assistant neu.
+
+### Manuelle Installation
+
 1. Lade das Repository über **Code → Download ZIP** herunter und entpacke es.
 2. Kopiere den ganzen Ordner `custom_components/luna_schulessen` in das Home-Assistant-Konfigurationsverzeichnis. Auf Home Assistant OS ist der Zielpfad `/config/custom_components/luna_schulessen`.
 3. Starte Home Assistant Core neu.
-4. Öffne **Einstellungen → Geräte & Dienste → Integration hinzufügen** und wähle **Luna Schulessen**.
-5. Gib deinen Luna-Benutzernamen oder deine E-Mail-Adresse und dein Luna-Passwort ein. Home Assistant speichert die Zugangsdaten im Integrationseintrag und verwendet sie für die Anmeldung per HTTPS am Luna-Portal.
+
+Jeder erfolgreiche [GitHub-Actions-Build](https://github.com/arndttigges/home-assistant-luna-schulessen/actions/workflows/build.yml) stellt unter **Artifacts** auch `luna_schulessen.zip` bereit. Darin liegt der Ordner `custom_components/luna_schulessen` für die manuelle Installation.
+
+### Integration einrichten
+
+1. Öffne **Einstellungen → Geräte & Dienste → Integration hinzufügen** und wähle **Luna Schulessen**. Der Marketplace kann die Einrichtung auch direkt nach der Installation öffnen.
+2. Gib deinen Luna-Benutzernamen oder deine E-Mail-Adresse und dein Luna-Passwort ein. Home Assistant speichert die Zugangsdaten im Integrationseintrag und verwendet sie für die Anmeldung per HTTPS am Luna-Portal.
 
 ![Luna Schulessen in der Suche „Integration hinzufügen“](docs/screenshots/add-integration.jpg)
 

@@ -1,0 +1,45 @@
+name: Build and validate Luna Schulessen
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Validate HACS repository
+        uses: hacs/action@main
+        with:
+          category: integration
+          comment: false
+
+      - name: Validate Home Assistant integration
+        uses: home-assistant/actions/hassfest@master
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      - name: Check Python syntax
+        run: python -m compileall -q custom_components/luna_schulessen
+
+      - name: Package integration
+        run: git archive --format=zip --output=luna_schulessen.zip HEAD custom_components/luna_schulessen
+
+      - name: Upload installation ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          path: luna_schulessen.zip
+          archive: false
+          if-no-files-found: error

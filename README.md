@@ -6,15 +6,36 @@ Luna Schulessen is a custom integration for the [Luna school lunch parent portal
 
 This is an independent integration. Version **0.1** was tested with Home Assistant Core **2026.11.1**.
 
-## Install and add to Home Assistant
+## Installation
 
 You need a Luna parent account with exactly one school lunch contract. Your Home Assistant instance needs HTTPS access to `bestellen.luna.de`.
+
+### Marketplace (Home Assistant 2026.11 or later)
+
+[![Open Luna Schulessen in Home Assistant](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=arndttigges&repository=home-assistant-luna-schulessen&category=integration)
+
+1. Use the link above or open **Settings → Marketplace → Add from link** and paste `https://github.com/arndttigges/home-assistant-luna-schulessen`.
+2. Connect GitHub if prompted and confirm adding the repository. Select **Integration** if asked for the type.
+3. Open **Luna Schulessen** and select **Install**. Restart Home Assistant if prompted.
+
+### Classic HACS (before Home Assistant 2026.11)
+
+1. Open **HACS → ⋮ → Custom repositories**.
+2. Paste `https://github.com/arndttigges/home-assistant-luna-schulessen`, select **Integration**, and add the repository.
+3. Open **Luna Schulessen** in HACS, select **Download**, and restart Home Assistant.
+
+### Manual installation
 
 1. On this repository's GitHub page, select **Code → Download ZIP** and extract the archive.
 2. Copy `custom_components/luna_schulessen` from the archive into your Home Assistant configuration directory. On Home Assistant OS, the manifest should end up at `/config/custom_components/luna_schulessen/manifest.json`.
 3. Restart Home Assistant Core.
-4. Open **Settings → Devices & services → Add integration**, search for **Luna Schulessen**, and select it.
-5. Enter your Luna username or email address and password. Home Assistant stores the credentials in the integration entry and sends them to the Luna portal over HTTPS when signing in.
+
+Each successful [GitHub Actions build](https://github.com/arndttigges/home-assistant-luna-schulessen/actions/workflows/build.yml) also provides `luna_schulessen.zip` under **Artifacts**. It contains the same `custom_components/luna_schulessen` folder for manual installation.
+
+### Set up in Home Assistant
+
+1. Open **Settings → Devices & services → Add integration**, search for **Luna Schulessen**, and select it. The Marketplace can also open setup directly after installation.
+2. Enter your Luna username or email address and password. Home Assistant stores the credentials in the integration entry and sends them to the Luna portal over HTTPS when signing in.
 
 ![Finding Luna Schulessen in the Home Assistant integration picker](docs/screenshots/add-integration.jpg)
 

@@ -1,0 +1,11 @@
+{
+  "domain": "luna_schulessen",
+  "name": "Luna Schulessen",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/arndttigges/home-assistant-luna-schulessen#readme",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "single_config_entry": true,
+  "version": "0.1"
+}

@@ -78,3 +78,7 @@ Für eine Erinnerung bei Freischaltung des nächsten Monats kannst du den Wechse
 - **Anmeldung abgelehnt** – Prüfe die Zugangsdaten und teste sie im Luna-Elternportal. Bei geändertem Passwort bietet Home Assistant eine erneute Anmeldung an.
 - **Bestellübersicht konnte nicht gelesen werden** – Prüfe, ob das Elternportal genau einen Schulessen-Vertrag enthält und Home Assistant das Portal erreichen kann.
 - **Sensoren sind nicht verfügbar** – Prüfe im Home-Assistant-Protokoll Meldungen zur Integration `luna_schulessen`. Kalender und Auswahlstatus verwenden unterschiedliche Ansichten des Luna-Portals. Eine Änderung am Portal kann eine Anpassung der Integration erforderlich machen.
+
+## Lizenz
+
+Luna Schulessen steht unter der GNU General Public License, Version 3 (`GPL-3.0-only`). Den vollständigen Text findest du in [LICENSE](LICENSE).

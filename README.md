@@ -74,3 +74,7 @@ entities:
 - **Sign-in was rejected** — Test your credentials in the Luna parent portal. If you changed your password, use Home Assistant's reauthentication flow.
 - **The order overview could not be read** — Check that your parent account shows one school lunch contract and that Home Assistant can reach the Luna portal.
 - **Availability sensors are unavailable** — Check the Home Assistant logs for `luna_schulessen`. Luna's order overview and booking calendar are separate views, so one can be unavailable while the other is working.
+
+## License
+
+Luna Schulessen is licensed under the GNU General Public License version 3 only (`GPL-3.0-only`). See [LICENSE](LICENSE).

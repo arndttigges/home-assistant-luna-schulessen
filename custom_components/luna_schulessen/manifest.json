@@ -1,6 +1,7 @@
 {
   "domain": "luna_schulessen",
   "name": "Luna Schulessen",
+  "categories": ["productivity_information.calendars_todos"],
   "codeowners": ["@arndttigges"],
   "config_flow": true,
   "documentation": "https://github.com/arndttigges/home-assistant-luna-schulessen#readme",

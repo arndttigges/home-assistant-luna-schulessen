@@ -23,6 +23,8 @@ jobs:
         with:
           category: integration
           comment: false
+          # The license check applies when submitting to the default catalog.
+          ignore: license
 
       - name: Validate Home Assistant integration
         uses: home-assistant/actions/hassfest@master

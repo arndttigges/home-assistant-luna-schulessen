@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Luna Schulessen",
+        "description": "Verbinde dein Luna-Elternkonto. Home Assistant ruft alle zwei Stunden die bestellten Gerichte für den aktuellen und den nächsten Monat ab.",
+        "data": {"username": "Luna-Benutzername oder E-Mail", "password": "Luna-Passwort"}
+      },
+      "reauth_confirm": {
+        "title": "Luna-Anmeldung erneuern",
+        "data": {"username": "Luna-Benutzername oder E-Mail", "password": "Luna-Passwort"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Luna hat die Anmeldung abgelehnt.",
+      "cannot_connect": "Die Luna-Bestellübersicht konnte nicht gelesen werden. Prüfe, ob im Elternportal genau ein Schulessen-Vertrag verfügbar ist."
+    },
+    "abort": {
+      "single_instance_allowed": "Luna Schulessen ist bereits eingerichtet.",
+      "reauth_successful": "Die Luna-Anmeldung wurde erneuert."
+    }
+  }
+}

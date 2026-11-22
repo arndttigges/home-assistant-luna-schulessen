@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Luna Schulessen",
+        "description": "Connect your Luna parent account. Home Assistant reads confirmed orders for this month and next month every two hours.",
+        "data": {"username": "Luna username or email", "password": "Luna password"}
+      },
+      "reauth_confirm": {
+        "title": "Reconnect Luna Schulessen",
+        "data": {"username": "Luna username or email", "password": "Luna password"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Luna rejected the sign-in.",
+      "cannot_connect": "Home Assistant could not read the Luna order overview. Check that the parent portal shows exactly one school-meal contract."
+    },
+    "abort": {
+      "single_instance_allowed": "Luna Schulessen is already set up.",
+      "reauth_successful": "Luna Schulessen is connected again."
+    }
+  }
+}
